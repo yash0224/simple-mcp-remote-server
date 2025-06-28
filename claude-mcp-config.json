@@ -1,8 +1,0 @@
-{
-    "mcpServers": {
-        "simple-mcp": {
-            "command": "npx",
-            "args": ["mcp-remote", "https://YOUR-APP-NAME.up.railway.app/mcp"]
-        }
-    }
-}

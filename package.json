@@ -1,26 +1,16 @@
+
 {
   "name": "simple-mcp-server",
   "version": "1.0.0",
-  "description": "A simple MCP server with Python SDK integration",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node index.js"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.4.0",
-    "express": "^4.18.2",
+    "@modelcontextprotocol/sdk": "^0.0.1",
     "cors": "^2.8.5",
-    "python-shell": "^5.0.0",
-    "dotenv": "^16.3.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  },
-  "keywords": ["mcp", "server", "python", "tools"],
-  "author": "Your Name",
-  "license": "MIT"
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "python-shell": "^5.0.0"
+  }
 }
