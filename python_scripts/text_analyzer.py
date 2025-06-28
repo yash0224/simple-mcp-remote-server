@@ -1,17 +1,17 @@
 import sys
 
-text = sys.argv[1]
-analysis_type = sys.argv[2]
+if __name__ == "__main__":
+    text = sys.argv[1]
+    analysis_type = sys.argv[2] if len(sys.argv) > 2 else "basic"
 
-if analysis_type == "basic":
-    words = len(text.split())
-    chars = len(text)
-    print(f"Word count: {words}")
-    print(f"Character count: {chars}")
-elif analysis_type == "detailed":
-    from collections import Counter
-    word_freq = Counter(text.split())
-    for word, count in word_freq.items():
-        print(f"{word}: {count}")
-else:
-    print("Unknown analysis type")
+    if analysis_type == "basic":
+        print(f"Words: {len(text.split())}")
+        print(f"Characters: {len(text)}")
+    elif analysis_type == "detailed":
+        from collections import Counter
+        print(f"Words: {len(text.split())}")
+        print(f"Characters: {len(text)}")
+        print("Letter Frequency:")
+        freq = Counter(text.replace(" ", ""))
+        for k, v in freq.items():
+            print(f"{k}: {v}")
