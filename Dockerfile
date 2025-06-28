@@ -1,14 +1,19 @@
+FROM node:20
 
-FROM node:18-slim
+# Install git
+RUN apt-get update && apt-get install -y git
 
-RUN apt-get update && apt-get install -y python3 python3-pip
-
+# Set working directory
 WORKDIR /app
 
-COPY package*.json ./
-RUN npm install
-
+# Copy everything
 COPY . .
 
+# Install dependencies
+RUN npm install
+
+# Expose port
 EXPOSE 3000
-CMD ["node", "server.js"]
+
+# Start your app
+CMD ["npm", "start"]
