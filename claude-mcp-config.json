@@ -1,1 +1,8 @@
-Content of claude-mcp-config.json...
+{
+    "mcpServers": {
+        "simple-mcp": {
+            "command": "npx",
+            "args": ["mcp-remote", "https://YOUR-APP-NAME.up.railway.app/mcp"]
+        }
+    }
+}
